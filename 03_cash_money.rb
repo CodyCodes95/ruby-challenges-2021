@@ -40,17 +40,11 @@ end
 def calculate_tax_payable
     puts "Please enter your YTD income"
     income = gets.chomp.to_i
+
     lower_bracket = { rate: 0.19, base: 18_200 }
     middle_bracket = { rate: 0.325, base: 37_000 }
     upper_middle_bracket = { rate: 0.37, base: 87_000 }
     upper_bracket = { rate: 0.45, base: 54_232 }
-
-    # tax_brackets = {
-    #     lower_bracket: [{rate: 0.19, base: 18200}],
-    #     middle_bracket: [{rate: 0.325, base: 37000}],
-    #     upper_middle_bracket: [{rate: 0.37, base: 87000}],
-    #     upper_bracket: [{rate: 0.45, base: 54232}]
-    # }
 
     if income >= 18_201 && income <= 37_000
         tax_calculation(lower_bracket, income, answer = {})
@@ -68,5 +62,11 @@ def calculate_tax_payable
     save_to_file(answer)
 end
 
-calculate_tax_payable()
+calculate_tax_payable
 
+# tax_brackets = {
+#     lower_bracket: [{rate: 0.19, base: 18200}],
+#     middle_bracket: [{rate: 0.325, base: 37000}],
+#     upper_middle_bracket: [{rate: 0.37, base: 87000}],
+#     upper_bracket: [{rate: 0.45, base: 54232}]
+# }
