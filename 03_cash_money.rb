@@ -31,10 +31,11 @@ end
 def save_to_file(tax)
     puts "Please enter your name"
     name = gets.chomp
-    tax.each do |_k, _v|
+    tax.each do
   File.write("#{name}'s tax.txt",
              "#{name}, your tax payable is #{tax[:tax_payable]} which was #{tax[:percentage_of_income]}% of your income.")
     end
+    puts "Your tax information has been written to a new file. Thankyou"
 end
 
 def calculate_tax_payable
