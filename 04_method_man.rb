@@ -15,7 +15,6 @@ end
 def film_output(film, menu)
   puts "#{NAME} starred in a #{menu == 'movie' ? 'movie' : 'television show'} called #{film[:title]} in #{film[:year]} as #{film[:role]}"
 end
-6
 # def string_builder(hash)
 #   str = ""
 #   index = 0
