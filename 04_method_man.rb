@@ -6,6 +6,7 @@
 
 # BEFORE cleaning up the code, take a moment to run the program to experience and understand what is happening.
 NAME = "Method Man"
+
 def album_outputs(album)
   puts "The album #{album[:title]} was released in #{album[:year]}, with a score of #{album[:score]}/5"
   puts "The song list of #{album[:title]} is:"
@@ -18,7 +19,7 @@ end
 # def string_builder(hash)
 #   str = ""
 #   index = 0
-#   hash[index].each do |key, value| 
+#   hash[index].each do |key, value|
 #     if key == [:title]
 #     str += "#{index + 1}. #{value}"
 #     index +=1
@@ -81,7 +82,7 @@ until quit == true
           puts "Press either 1/2/3/4/5/6/7"
           input = gets.chomp
           system "clear"
-          if input != "6" || input != "7"
+          if input != "6" && input != "7"
             album = (studio_work[(input.to_i - 1)])
             album_outputs(album)
           elsif input == "6"
@@ -123,7 +124,7 @@ until quit == true
           puts "Press either 1/2/3/4/5/6"
           input = gets.chomp
           system "clear"
-          if input != "5" || input != "6"
+          if input != "5" && input != "6"
             album = (collab_work[(input.to_i - 1)])
             album_outputs(album)
           elsif input == "5"
@@ -177,7 +178,7 @@ until quit == true
           puts "Press either 1/2/3/4/5/6"
           input = gets.chomp
           system "clear"
-          if input != "5" || input != "6"
+          if input != "5" && input != "6"
             film = (film_list[(input.to_i - 1)])
             film_output(film, 'movie')
           elsif input == "5"
@@ -218,7 +219,7 @@ until quit == true
           puts "Press either 1/2/3/4/5/6"
           input = gets.chomp
           system "clear"
-          if input != "5" || input != "6"
+          if input != "5" && input != "6"
            film = (television_list[(input.to_i - 1)])
            film_output(film, 'tv')
           elsif input == "5"
@@ -230,9 +231,9 @@ until quit == true
           end
         end
       elsif input == "3"
-        filmography_menu = false
+        acting_menu = false
       elsif input == "4"
-        filmography_menu = false
+        acting_menu = false
         quit = true
       end
     end
